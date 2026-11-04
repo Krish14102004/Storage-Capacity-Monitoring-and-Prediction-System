@@ -11,7 +11,7 @@ from modules.database_manager import get_storage_records, import_storage_records
 
 
 SYNTHETIC_DATA_NOTICE = (
-    "Synthetic/demo data only — these records are simulated and are not live "
+    "Synthetic data — these records are simulated and are not live "
     "server telemetry."
 )
 
@@ -43,7 +43,7 @@ def load_dashboard_records() -> pd.DataFrame:
 
 def render_synthetic_data_notice() -> None:
     """Show the required synthetic-data disclosure on every dashboard page."""
-    st.warning(SYNTHETIC_DATA_NOTICE, icon="⚠️")
+    st.warning(SYNTHETIC_DATA_NOTICE)
 
 
 def latest_records_by_server(records: pd.DataFrame) -> pd.DataFrame:
